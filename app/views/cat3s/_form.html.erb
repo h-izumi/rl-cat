@@ -13,7 +13,9 @@
 
   <div class="field">
     <%= form.label :cat2_id %>
-    <%= form.collection_radio_buttons(:cat2_id, Cat2.all, :id, :name) %>
+    <%= form.collection_radio_buttons(:cat2_id, Cat2.all, :id, :name) do |b| %>
+      <%= b.label(class: 'radio-cat2', 'data-cat1-id': b.object&.cat1_id) { b.radio_button + b.text } %>
+    <%- end -%>
   </div>
 
   <div class="field">
