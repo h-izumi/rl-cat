@@ -14,7 +14,7 @@
   <tbody>
     <% @cat2s.each do |cat2| %>
       <tr>
-        <td><%= cat2.cat1 %></td>
+        <td><%= cat2.cat1&.name %></td>
         <td><%= cat2.name %></td>
         <td><%= link_to 'Show', cat2 %></td>
         <td><%= link_to 'Edit', edit_cat2_path(cat2) %></td>
