@@ -1,0 +1,27 @@
+<%= form_with(model: cat3, local: true) do |form| %>
+  <% if cat3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cat3.errors.count, "error") %> prohibited this cat3 from being saved:</h2>
+
+      <ul>
+      <% cat3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cat2_id %>
+    <%= form.text_field :cat2_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
