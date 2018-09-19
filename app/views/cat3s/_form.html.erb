@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :cat2_id %>
-    <%= form.text_field :cat2_id %>
+    <%= form.collection_radio_buttons(:cat2_id, Cat2.all, :id, :name) %>
   </div>
 
   <div class="field">
